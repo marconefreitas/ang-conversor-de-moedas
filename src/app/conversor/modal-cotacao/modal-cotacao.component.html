@@ -1,0 +1,30 @@
+<div class="modal" tabindex="-1" [id]="id">
+  <div class="modal-dialog" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalLabel">
+        	Cotação em {{dataCotacao | dataBr }}
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div>
+			    <h2> {{conversao.valor}}
+               {{conversao.moedaDe}}
+              =
+              {{valorConvertido}}
+              {{conversao.moedaPara}}
+          </h2>
+			    <p>
+            1 {{conversao.moedaPara}} = {{cotacaoDe}} / 1 {{conversao.moedaDe}}  = {{cotacaoPara}}
+
+          </p>
+		    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="novaConsulta()" >
+        	Nova consulta
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
